@@ -1,5 +1,6 @@
 package com.sparta.campproject.security;
 
+import com.sparta.campproject.Timestamped;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "member")
 @Entity
-public class Member {
+public class Member extends Timestamped {
 
     @Id
     @Column(name = "member_id")
@@ -25,8 +26,7 @@ public class Member {
     private Authority authority;
 
     @Builder
-    public Member(Long id, String nickname, String password, Authority authority) {
-        this.id = id;
+    public Member(String nickname, String password, Authority authority) {
         this.nickname = nickname;
         this.password = password;
         this.authority = authority;

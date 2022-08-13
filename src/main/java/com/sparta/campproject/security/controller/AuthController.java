@@ -24,7 +24,6 @@ public class AuthController {
         if(memberRequestDto == null) {
             return signup(null);
         }
-
         return ResponseEntity.ok(authService.signup(memberRequestDto));
     }
 
