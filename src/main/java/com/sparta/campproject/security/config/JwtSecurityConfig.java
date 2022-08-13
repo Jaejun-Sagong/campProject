@@ -1,7 +1,7 @@
-package com.sparta.campproject.security.Config;
+package com.sparta.campproject.security.config;
 
-import com.sparta.campproject.security.Filter.JwtFilter;
-import com.sparta.campproject.security.Token.TokenProvider;
+import com.sparta.campproject.security.filter.JwtFilter;
+import com.sparta.campproject.security.token.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

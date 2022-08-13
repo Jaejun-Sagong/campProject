@@ -1,6 +1,6 @@
-package com.sparta.campproject.security.Token;
+package com.sparta.campproject.security.token;
 
-import com.sparta.campproject.security.Dto.TokenDto;
+import com.sparta.campproject.security.dto.TokenDto;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

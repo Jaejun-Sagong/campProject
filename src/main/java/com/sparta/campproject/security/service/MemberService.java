@@ -1,7 +1,7 @@
-package com.sparta.campproject.security.Service;
+package com.sparta.campproject.security.service;
 
-import com.sparta.campproject.security.Dto.MemberResponseDto;
-import com.sparta.campproject.security.Repository.MemberRepository;
+import com.sparta.campproject.security.dto.MemberResponseDto;
+import com.sparta.campproject.security.repository.MemberRepository;
 import com.sparta.campproject.security.SecurityUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

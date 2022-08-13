@@ -1,10 +1,10 @@
-package com.sparta.campproject.security.Controller;
+package com.sparta.campproject.security.controller;
 
-import com.sparta.campproject.security.Dto.MemberRequestDto;
-import com.sparta.campproject.security.Dto.MemberResponseDto;
-import com.sparta.campproject.security.Dto.TokenDto;
-import com.sparta.campproject.security.Dto.TokenRequestDto;
-import com.sparta.campproject.security.Service.AuthService;
+import com.sparta.campproject.security.dto.MemberRequestDto;
+import com.sparta.campproject.security.dto.MemberResponseDto;
+import com.sparta.campproject.security.dto.TokenDto;
+import com.sparta.campproject.security.dto.TokenRequestDto;
+import com.sparta.campproject.security.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +24,7 @@ public class AuthController {
         if(memberRequestDto == null) {
             return signup(null);
         }
+
         return ResponseEntity.ok(authService.signup(memberRequestDto));
     }
 

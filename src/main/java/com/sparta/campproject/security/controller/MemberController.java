@@ -1,7 +1,7 @@
-package com.sparta.campproject.security.Controller;
+package com.sparta.campproject.security.controller;
 
-import com.sparta.campproject.security.Dto.MemberResponseDto;
-import com.sparta.campproject.security.Service.MemberService;
+import com.sparta.campproject.security.dto.MemberResponseDto;
+import com.sparta.campproject.security.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

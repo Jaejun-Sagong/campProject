@@ -1,6 +1,6 @@
-package com.sparta.campproject.security.Filter;
+package com.sparta.campproject.security.filter;
 
-import com.sparta.campproject.security.Token.TokenProvider;
+import com.sparta.campproject.security.token.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

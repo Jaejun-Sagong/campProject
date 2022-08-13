@@ -1,4 +1,4 @@
-package com.sparta.campproject.security.Token.RefreshToken;
+package com.sparta.campproject.security.token.refreshToken;
 
 import lombok.Builder;
 import lombok.Getter;

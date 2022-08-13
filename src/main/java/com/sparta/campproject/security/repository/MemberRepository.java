@@ -1,4 +1,4 @@
-package com.sparta.campproject.security.Repository;
+package com.sparta.campproject.security.repository;
 
 import com.sparta.campproject.security.Member;
 import org.springframework.data.jpa.repository.JpaRepository;

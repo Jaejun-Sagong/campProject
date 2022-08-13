@@ -1,4 +1,4 @@
-package com.sparta.campproject.security.Dto;
+package com.sparta.campproject.security.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

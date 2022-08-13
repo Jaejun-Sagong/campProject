@@ -25,7 +25,8 @@ public class Member {
     private Authority authority;
 
     @Builder
-    public Member(String nickname, String password, Authority authority) {
+    public Member(Long id, String nickname, String password, Authority authority) {
+        this.id = id;
         this.nickname = nickname;
         this.password = password;
         this.authority = authority;

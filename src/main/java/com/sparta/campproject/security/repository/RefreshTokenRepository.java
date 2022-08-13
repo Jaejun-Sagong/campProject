@@ -1,6 +1,6 @@
-package com.sparta.campproject.security.Repository;
+package com.sparta.campproject.security.repository;
 
-import com.sparta.campproject.security.Token.RefreshToken.RefreshToken;
+import com.sparta.campproject.security.token.refreshToken.RefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

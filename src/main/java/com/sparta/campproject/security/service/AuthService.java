@@ -1,14 +1,14 @@
-package com.sparta.campproject.security.Service;
+package com.sparta.campproject.security.service;
 
-import com.sparta.campproject.security.Dto.MemberRequestDto;
-import com.sparta.campproject.security.Dto.MemberResponseDto;
-import com.sparta.campproject.security.Dto.TokenDto;
-import com.sparta.campproject.security.Dto.TokenRequestDto;
+import com.sparta.campproject.security.dto.MemberRequestDto;
+import com.sparta.campproject.security.dto.MemberResponseDto;
+import com.sparta.campproject.security.dto.TokenDto;
+import com.sparta.campproject.security.dto.TokenRequestDto;
 import com.sparta.campproject.security.Member;
-import com.sparta.campproject.security.Repository.MemberRepository;
-import com.sparta.campproject.security.Repository.RefreshTokenRepository;
-import com.sparta.campproject.security.Token.RefreshToken.RefreshToken;
-import com.sparta.campproject.security.Token.TokenProvider;
+import com.sparta.campproject.security.repository.MemberRepository;
+import com.sparta.campproject.security.repository.RefreshTokenRepository;
+import com.sparta.campproject.security.token.refreshToken.RefreshToken;
+import com.sparta.campproject.security.token.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
