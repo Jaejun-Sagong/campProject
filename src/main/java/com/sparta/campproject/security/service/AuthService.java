@@ -69,6 +69,23 @@ public class AuthService {
     }
 
     @Transactional
+    public Authentication logout(TokenRequestDto tokenRequestDto) {
+        if (!tokenProvider.validateToken(tokenRequestDto.getRefreshToken())) {
+            throw new RuntimeException("Refresh Token 이 유효하지 않습니다.");
+        }
+
+        Authentication authentication = tokenProvider.getAuthentication(tokenRequestDto.getAccessToken());
+        RefreshToken refreshToken = refreshTokenRepository.findByKey(authentication.getName())
+                .orElseThrow(() -> new RuntimeException("이미 로그아웃 된 사용자입니다."));
+
+        if (!refreshToken.getValue().equals(tokenRequestDto.getRefreshToken())) {
+            throw new RuntimeException("토큰의 유저 정보가 일치하지 않습니다.");
+        }
+        refreshTokenRepository.deleteRefreshTokenByKey(authentication.getName());
+        return authentication;
+    }
+
+    @Transactional
     public TokenDto reissue(TokenRequestDto tokenRequestDto) {
         // 1. Refresh Token 검증
         if (!tokenProvider.validateToken(tokenRequestDto.getRefreshToken())) {

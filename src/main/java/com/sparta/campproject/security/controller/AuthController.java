@@ -7,10 +7,7 @@ import com.sparta.campproject.security.dto.TokenRequestDto;
 import com.sparta.campproject.security.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -31,6 +28,13 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<TokenDto> login(@RequestBody MemberRequestDto memberRequestDto) {
         return ResponseEntity.ok(authService.login(memberRequestDto));
+    }
+
+    @GetMapping("/logout")
+    public String logout(@RequestBody TokenRequestDto tokenRequestDto) {
+        authService.logout(tokenRequestDto);
+        System.out.println("ok!");
+        return "/auth/login";
     }
 
     // 토큰 재발급
