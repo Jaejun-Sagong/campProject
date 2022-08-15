@@ -1,4 +1,4 @@
-package com.sparta.campproject.security;
+package com.sparta.campproject.security.jwt;
 
 import com.sparta.campproject.Timestamped;
 import lombok.Builder;

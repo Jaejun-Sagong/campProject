@@ -1,6 +1,6 @@
 package com.sparta.campproject.security.repository;
 
-import com.sparta.campproject.security.Member;
+import com.sparta.campproject.security.jwt.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

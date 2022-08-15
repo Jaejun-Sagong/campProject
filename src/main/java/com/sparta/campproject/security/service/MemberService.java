@@ -2,7 +2,7 @@ package com.sparta.campproject.security.service;
 
 import com.sparta.campproject.security.dto.MemberResponseDto;
 import com.sparta.campproject.security.repository.MemberRepository;
-import com.sparta.campproject.security.SecurityUtil;
+import com.sparta.campproject.security.jwt.SecurityUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

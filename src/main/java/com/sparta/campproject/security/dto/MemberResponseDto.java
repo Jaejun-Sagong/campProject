@@ -1,6 +1,6 @@
 package com.sparta.campproject.security.dto;
 
-import com.sparta.campproject.security.Member;
+import com.sparta.campproject.security.jwt.Member;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

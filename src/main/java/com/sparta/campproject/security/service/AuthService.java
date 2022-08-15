@@ -4,7 +4,7 @@ import com.sparta.campproject.security.dto.MemberRequestDto;
 import com.sparta.campproject.security.dto.MemberResponseDto;
 import com.sparta.campproject.security.dto.TokenDto;
 import com.sparta.campproject.security.dto.TokenRequestDto;
-import com.sparta.campproject.security.Member;
+import com.sparta.campproject.security.jwt.Member;
 import com.sparta.campproject.security.repository.MemberRepository;
 import com.sparta.campproject.security.repository.RefreshTokenRepository;
 import com.sparta.campproject.security.token.refreshToken.RefreshToken;

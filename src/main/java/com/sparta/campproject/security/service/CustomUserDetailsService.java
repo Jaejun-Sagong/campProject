@@ -1,6 +1,6 @@
 package com.sparta.campproject.security.service;
 
-import com.sparta.campproject.security.Member;
+import com.sparta.campproject.security.jwt.Member;
 import com.sparta.campproject.security.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
