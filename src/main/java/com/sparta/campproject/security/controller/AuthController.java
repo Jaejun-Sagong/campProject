@@ -6,6 +6,8 @@ import com.sparta.campproject.security.dto.TokenDto;
 import com.sparta.campproject.security.dto.TokenRequestDto;
 import com.sparta.campproject.security.service.AuthService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,10 +26,21 @@ public class AuthController {
         return ResponseEntity.ok(authService.signup(memberRequestDto));
     }
 
-    // 로그인
+     //로그인
+//    @PostMapping("/login")
+//    public ResponseEntity<TokenDto> login(@RequestBody MemberRequestDto memberRequestDto) {
+//        return ResponseEntity.ok(authService.login(memberRequestDto));
+//    }
+
     @PostMapping("/login")
-    public ResponseEntity<TokenDto> login(@RequestBody MemberRequestDto memberRequestDto) {
-        return ResponseEntity.ok(authService.login(memberRequestDto));
+    public ResponseEntity<?> login(@RequestBody MemberRequestDto memberRequestDto) {
+        String token = authService.login(memberRequestDto).getAccessToken();
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add("Authorization","Bearer : " + token);
+
+        return new ResponseEntity<>(httpHeaders, HttpStatus.FOUND);
+
     }
 
     @GetMapping("/logout")
